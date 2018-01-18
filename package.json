@@ -2,9 +2,10 @@
   "name": "veedeo-project",
   "version": "1.0.0",
   "description": "Veedeo Project",
+  "main": "index.js",
   "scripts": {
     "prestart": "babel-node tools/startMessage.js",
-    "start": "npm-run-all --parallel open:src lint:watch",
+    "start": "npm-run-all --parallel open:src",
     "open:src": "babel-node tools/srcServer.js",
     "lint": "node_modules/.bin/esw webpack.config.* src tools",
     "lint:watch": "npm run lint -- --watch"
@@ -22,7 +23,8 @@
     "react-router-redux": "4.0.4",
     "redux": "3.5.2",
     "redux-thunk": "2.0.1",
-    "toastr": "2.1.2"
+    "toastr": "2.1.2",
+    "youtube-api-search": "0.0.5"
   },
   "devDependencies": {
     "babel-cli": "6.8.0",
